@@ -15,6 +15,8 @@ import Grid from "@mui/material/Grid";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import { useState } from "react";
+import ReactPlayer from "react-player";
+
 
 
 const videoEkle = () => {
@@ -40,7 +42,7 @@ const videoEkle = () => {
       <Sidebar />
       <div className="container">
         <Navbar />
-      
+
         <React.Fragment>
           <Paper elevation={3} sx={{ marginRight: "15%", marginLeft: "15%" }}>
             <Box sx={{ padding: 5 }}>
@@ -71,27 +73,27 @@ const videoEkle = () => {
                     variant="outlined"
                   />
                 </Grid>
-                {/* <Grid item xs={12} sm={2}>
-              <InputLabel
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  fontWeight: 700
-                }}
-              >
-                Content
-              </InputLabel>
-            </Grid>
-            <Grid item xs={12} sm={10}>
-              <TextField
-                id="outlined-multiline-static"
-                label="Content"
-                multiline
-                fullWidth
-                rows={4}
-              />
-            </Grid> */}
                 <Grid item xs={12} sm={2}>
+                  <InputLabel
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      fontWeight: 700,
+                    }}
+                  >
+                    Content
+                  </InputLabel>
+                </Grid>
+                <Grid item xs={12} sm={10}>
+                  <TextField
+                    id="outlined-multiline-static"
+                    label="Content"
+                    multiline
+                    fullWidth
+                    rows={4}
+                  />
+                </Grid>
+                {/* <Grid item xs={12} sm={2}>
                   <InputLabel
                     sx={{
                       display: "flex",
@@ -113,9 +115,8 @@ const videoEkle = () => {
                     autoComplete="off"
                     variant="outlined"
                   />
-                </Grid>
+                </Grid> */}
 
-                {/*  */}
                 <Grid item xs={12} sm={2}>
                   <InputLabel
                     sx={{
@@ -144,7 +145,39 @@ const videoEkle = () => {
                     </Select>
                   </FormControl>
                 </Grid>
+
                 <Grid item xs={12} sm={2}>
+                  <InputLabel
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      fontWeight: 700,
+                    }}
+                  >
+                  URL
+                  </InputLabel>
+                </Grid>
+
+                <Grid item xs={12} sm={10}>
+                  <TextField
+                    required
+                    id="url"
+                    name="url"
+                    label="Video url"
+                    size="small"
+                    autoComplete="off"
+                    variant="outlined"
+                  />
+                </Grid>
+
+                <Grid item xs={12} sm={4}>
+                  <ReactPlayer
+                    width={320}
+                    height={180}
+                    url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+                  />
+                </Grid>
+                {/* <Grid item xs={12} sm={2}>
                   <InputLabel
                     sx={{
                       display: "flex",
@@ -166,9 +199,9 @@ const videoEkle = () => {
                     autoComplete="off"
                     variant="outlined"
                   />
-                </Grid>
+                </Grid> */}
 
-                <Grid item xs={12} sm={2}>
+                {/* <Grid item xs={12} sm={2}>
                   <InputLabel
                     sx={{
                       display: "flex",
@@ -184,9 +217,9 @@ const videoEkle = () => {
                   <Button>
                     <UploadFileIcon />
                   </Button>
-                </Grid>
+                </Grid> */}
 
-                <Grid item xs={12} sm={4}>
+                {/* <Grid item xs={12} sm={4}>
                   <FormControl fullWidth size="small">
                     <InputLabel id="demo-simple-select-label">Age</InputLabel>
                     <Select
@@ -201,12 +234,12 @@ const videoEkle = () => {
                       ))}
                     </Select>
                   </FormControl>
-                </Grid>
+                </Grid> */}
 
                 <Grid item xs={12} sm={6} />
                 <Grid item xs={12} sm={5} />
                 <Grid item xs={12} sm={4}>
-                  <Button variant="contained" sx={{ color: "#ff781f" }}>
+                  <Button variant="contained" sx={{ color: "#fff" }}>
                     Save
                   </Button>
                 </Grid>
@@ -214,33 +247,6 @@ const videoEkle = () => {
                 {/*  */}
                 {/*  */}
                 {/*  */}
-
-                <Grid item xs={12} sm={5}>
-                  <FormControl component="fieldset">
-                    {/* <FormLabel component="legend">Weekdays</FormLabel> */}
-                    {/* <FormGroup aria-label="position">
-          <FormControlLabel
-            value=""
-            control={<Input />}
-            label="Title"
-            labelPlacement="bottom"
-          />
-
-          <FormControlLabel
-            value=""
-            control={<Input />}
-            label="Artist"
-            labelPlacement="bottom"
-          />
-        </FormGroup> */}
-                    <FormControlLabel
-                      value="tuesday"
-                      control={<Checkbox />}
-                      label="Tuesday"
-                      labelPlacement="bottom"
-                    />
-                  </FormControl>
-                </Grid>
               </Grid>
             </Box>
           </Paper>
